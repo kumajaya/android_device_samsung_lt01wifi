@@ -31,8 +31,8 @@ TARGET_KERNEL_CONFIG := cyanogenmod_lt01wifi_defconfig
 # assert
 TARGET_OTA_ASSERT_DEVICE := lt01wifi,lt01wifixx,lt01wifiue,SM-T310
 
-# inherit from the proprietary version
--include vendor/samsung/lt01wifi/BoardConfigVendor.mk
+# inherit from the proprietary version, reuse SM-T311 vendor
+-include vendor/samsung/lt013g/BoardConfigVendor.mk
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/lt01wifi/rootdir/fstab.smdk4x12
