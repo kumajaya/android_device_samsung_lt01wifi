@@ -19,25 +19,21 @@
 
 -include device/samsung/lt01-common/BoardCommonConfig.mk
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-BOARD_MODEM_TYPE := xmm6262
-
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt013g/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt01wifi/include
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt013g/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt01wifi/bluetooth
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/lt01
-TARGET_KERNEL_CONFIG := cyanogenmod_lt013g_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_lt01wifi_defconfig
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := lt013g,lt013gxx,SM-T311
+TARGET_OTA_ASSERT_DEVICE := lt01wifi,lt01wifixx,lt01wifiue,SM-T310
 
 # inherit from the proprietary version
--include vendor/samsung/lt013g/BoardConfigVendor.mk
+-include vendor/samsung/lt01wifi/BoardConfigVendor.mk
 
 # Recovery
-TARGET_RECOVERY_FSTAB := device/samsung/lt013g/rootdir/fstab.smdk4x12
+TARGET_RECOVERY_FSTAB := device/samsung/lt01wifi/rootdir/fstab.smdk4x12
 RECOVERY_FSTAB_VERSION := 2

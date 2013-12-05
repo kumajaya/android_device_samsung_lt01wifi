@@ -17,7 +17,7 @@
 # Include common makefile
 $(call inherit-product, device/samsung/lt01-common/common.mk)
 
-LOCAL_PATH := device/samsung/lt013g
+LOCAL_PATH := device/samsung/lt01wifi
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -36,7 +36,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/lt013g
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/lt01wifi
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -50,24 +51,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
-# Product specific Packages
-PRODUCT_PACKAGES += \
-    libsecril-client \
-    libsecril-client-sap \
-    SamsungServiceMode
-
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=SamsungExynos4RIL \
-    mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.call_ring.delay=3000
+    mobiledata.interfaces=wlan0
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
+    frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
 PRODUCT_CHARACTERISTICS := tablet
 
+# Reuse SM-T311 vendor blobs
 $(call inherit-product-if-exists, vendor/samsung/lt013g/lt013g-vendor.mk)

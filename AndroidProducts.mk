@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_lt013g.mk
+    $(LOCAL_DIR)/full_lt01wifi.mk
