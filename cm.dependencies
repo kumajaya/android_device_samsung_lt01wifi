@@ -4,6 +4,10 @@
         "target_path": "device/samsung/lt01-common"
     },
     {
+        "repository": "android_device_samsung_lt013g",
+        "target_path": "device/samsung/lt013g"
+    },
+    {
         "repository": "android_kernel_samsung_lt01",
         "target_path": "kernel/samsung/lt01"
     },

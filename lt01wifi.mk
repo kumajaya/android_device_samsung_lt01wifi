@@ -14,9 +14,6 @@
 # limitations under the License.
 #
 
-# Include common makefile
-$(call inherit-product, device/samsung/lt01-common/common.mk)
-
 LOCAL_PATH := device/samsung/lt01wifi
 
 # Overlay
@@ -61,5 +58,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_CHARACTERISTICS := tablet
 
+$(call inherit-product-if-exists, vendor/samsung/lt01wifi/lt01wifi-vendor.mk)
+
 # Reuse SM-T311 vendor blobs
 $(call inherit-product-if-exists, vendor/samsung/lt013g/lt013g-vendor.mk)
+
+# Include common makefile
+$(call inherit-product, device/samsung/lt01-common/common.mk)
