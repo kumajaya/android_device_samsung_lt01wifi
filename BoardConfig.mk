@@ -17,9 +17,7 @@
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 
--include device/samsung/lt01-common/BoardCommonConfig.mk
-
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt01wifi/include
+-include device/samsung/lt013g/BoardCommonConfig.mk
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt01wifi/bluetooth
@@ -29,10 +27,7 @@ TARGET_KERNEL_SOURCE := kernel/samsung/lt01
 TARGET_KERNEL_CONFIG := cyanogenmod_lt01wifi_defconfig
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := lt01wifi,lt01wifixx,lt01wifiue,SM-T310
-
-# inherit from the proprietary version, reuse SM-T311 vendor
--include vendor/samsung/lt013g/BoardConfigVendor.mk
+TARGET_OTA_ASSERT_DEVICE := lt01wifi,lt01wifixx,lt01wifiue,SM-T310,lt013g,lt013gxx,SM-T311
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/lt01wifi/rootdir/fstab.smdk4x12
