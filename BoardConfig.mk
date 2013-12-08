@@ -19,6 +19,8 @@
 
 -include device/samsung/lt013g/BoardCommonConfig.mk
 
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt013g/include
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt01wifi/bluetooth
 
