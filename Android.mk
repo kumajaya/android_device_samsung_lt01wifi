@@ -20,7 +20,7 @@ ifeq ($(TARGET_DEVICE),lt01wifi)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-COMMON_T01_DIRS := audio irda liblights
-include $(foreach common_dirs,$(COMMON_T01_DIRS),device/samsung/lt013g/$(common_dirs)/Android.mk)
+COMMON_LT01_DIRS := audio irda liblights
+include $(foreach common_dirs,$(COMMON_LT01_DIRS),device/samsung/lt013g/$(common_dirs)/Android.mk)
 
 endif

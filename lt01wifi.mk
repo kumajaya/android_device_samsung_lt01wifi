@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+$(call inherit-product, device/samsung/lt013g/common.mk)
+
 LOCAL_PATH := device/samsung/lt01wifi
 
 # Overlay
@@ -29,12 +31,16 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/lt01wifi
 
+# Gps
+PRODUCT_COPY_FILES += \
+    device/samsung/lt013g/configs/gps.xml:system/etc/gps.xml
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=wlan0
 
 $(call inherit-product-if-exists, vendor/samsung/lt01wifi/lt01wifi-vendor.mk)
 
-$(call inherit-product, device/samsung/lt013g/common.mk)
+$(call inherit-product-if-exists, vendor/samsung/lt013g/lt013g-vendor.mk)
 
 $(call inherit-product, device/samsung/lt01-common/common.mk)

@@ -17,7 +17,7 @@
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 
--include device/samsung/lt013g/BoardCommonConfig.mk
+-include device/samsung/lt01-common/BoardCommonConfig.mk
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt01wifi/include
 
@@ -30,6 +30,9 @@ TARGET_KERNEL_CONFIG := cyanogenmod_lt01wifi_defconfig
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := lt01wifi,lt01wifixx,lt01wifiue,SM-T310,lt013g,lt013gxx,SM-T311
+
+# inherit from the proprietary version
+-include vendor/samsung/lt01wifi/BoardConfigVendor.mk
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/lt01wifi/rootdir/fstab.smdk4x12
