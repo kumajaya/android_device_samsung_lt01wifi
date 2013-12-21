@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
 
 # Gps
 PRODUCT_COPY_FILES += \
-    device/samsung/lt013g/configs/gps.xml:system/etc/gps.xml
+    $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
