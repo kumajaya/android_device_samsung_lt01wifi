@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2012 The CyanogenMod Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ ifeq ($(TARGET_DEVICE),lt01wifi)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-COMMON_LT01_DIRS := audio irda liblights
+COMMON_LT01_DIRS := audio consumerir liblights
 include $(foreach common_dirs,$(COMMON_LT01_DIRS),device/samsung/lt013g/$(common_dirs)/Android.mk)
 
 endif
