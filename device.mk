@@ -39,6 +39,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=wlan0
 
+# TWRP
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
+# Omni Packages
+PRODUCT_PACKAGES += \
+    OmniGears \
+    OmniTorch
+
 $(call inherit-product-if-exists, vendor/samsung/lt01wifi/lt01wifi-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/lt013g/lt013g-vendor.mk)

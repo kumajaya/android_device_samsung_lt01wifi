@@ -1,0 +1,2 @@
+add_lunch_combo omni_lt01wifi-userdebug
+add_lunch_combo full_lt01wifi-userdebug

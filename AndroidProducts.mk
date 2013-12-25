@@ -15,4 +15,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_lt01wifi.mk
+    $(LOCAL_DIR)/aosp_lt01wifi.mk \
+    $(LOCAL_DIR)/omni_lt01wifi.mk

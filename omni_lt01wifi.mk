@@ -1,5 +1,5 @@
 # Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/cdma.mk)
+$(call inherit-product, vendor/omni/config/cdma.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := lt01wifi
@@ -8,15 +8,18 @@ PRODUCT_RELEASE_NAME := lt01wifi
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 800
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Inherit from our omni product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/lt01wifi/full_lt01wifi.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lt01wifi
-PRODUCT_NAME := cm_lt01wifi
+PRODUCT_NAME := omni_lt01wifi
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T310
 PRODUCT_MANUFACTURER := samsung
