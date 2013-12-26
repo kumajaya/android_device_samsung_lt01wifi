@@ -8,7 +8,7 @@
     {
         "remote": "github",
         "repository": "andi34/android_device_samsung_lt013g",
-        "target_path": "device/samsung/lt013g"
+        "target_path": "device/samsung/lt013g",
         "revision": "android-4.4"
     },
     {
