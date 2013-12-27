@@ -20,7 +20,7 @@ PRODUCT_RELEASE_NAME := lt01wifi
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/lt013g/full_lt01wifi.mk)
+$(call inherit-product, device/samsung/lt01wifi/full_lt01wifi.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := lt01wifi
