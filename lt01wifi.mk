@@ -39,10 +39,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Product specific Packages
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=wlan0
