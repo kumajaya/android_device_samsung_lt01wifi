@@ -35,18 +35,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.xml:system/etc/gps.xml
 
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    mobiledata.interfaces=wlan0
-
 # TWRP
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
-# Omni Packages
+# Product specific Packages
 PRODUCT_PACKAGES += \
-    OmniGears \
-    OmniTorch
+    DeviceSettings
+
+# RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    mobiledata.interfaces=wlan0
 
 $(call inherit-product-if-exists, vendor/samsung/lt01wifi/lt01wifi-vendor.mk)
 
