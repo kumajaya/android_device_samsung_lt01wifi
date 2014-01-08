@@ -20,7 +20,4 @@ ifeq ($(TARGET_DEVICE),lt01wifi)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-COMMON_LT01_DIRS := audio consumerir libsensors
-include $(foreach common_dirs,$(COMMON_LT01_DIRS),device/samsung/lt013g/$(common_dirs)/Android.mk)
-
 endif
