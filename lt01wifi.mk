@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=wlan0
 
+# Disable SELinux
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.boot.selinux=disabled
+
 $(call inherit-product-if-exists, vendor/samsung/lt01wifi/lt01wifi-vendor.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/lt013g/lt013g-vendor.mk)
